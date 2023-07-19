@@ -19,7 +19,7 @@ namespace Test1
             if (vorsprung)
             {
                 Console.WriteLine($"Ich bin das {GetType().Name}");
-                Console.WriteLine($"Ich hatte einen Vorsprung von 240 Minuten");
+                Console.WriteLine($"Ich bekomme einen Vorsprung von 240 Minuten");
                 Console.WriteLine($"Die aktulle Geschwindigkeit beträgt {AktuelleGeschwindigkeit} km/h");
                 Console.WriteLine($"Ich bin aktuell {AktuellePosition} km gefahren.");
             }

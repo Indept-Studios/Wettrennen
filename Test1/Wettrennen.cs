@@ -9,7 +9,7 @@ namespace Test1
     class Wettrennen
     {
         Fahrzeug fahrrad = new Fahrrad(0);
-        Fahrzeug ford = new Auto(0);
+        Fahrzeug focus = new Auto(0);
         Fahrzeug mustang = new Rennwagen(0);
         Fahrzeug rkw = new Krankenwagen(0, false);
 
@@ -18,7 +18,7 @@ namespace Test1
         public Wettrennen(int dauer)
         {
             teilnehmer.Add(fahrrad);
-            teilnehmer.Add(ford);
+            teilnehmer.Add(focus);
             teilnehmer.Add(mustang);
             teilnehmer.Add(rkw);
 
@@ -36,7 +36,7 @@ namespace Test1
                 }
                 Console.WriteLine("------------------------------------------------------");
             }
-
+            Console.WriteLine("Drücken Sie eine beliebige Taste!");
             Geschwindigkeit();
 
             Console.WriteLine("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX");
@@ -51,7 +51,7 @@ namespace Test1
             Console.ReadKey();
             Console.Clear();
             fahrrad.SetzeGeschwindigkeit(20);
-            ford.SetzeGeschwindigkeit(150);
+            focus.SetzeGeschwindigkeit(150);
             mustang.SetzeGeschwindigkeit(200);
             rkw.SetzeGeschwindigkeit(80);
             Console.ReadKey();
@@ -65,14 +65,16 @@ namespace Test1
             fahrrad.Bewege(minuten);
             fahrrad.PrintStats();
             TypeLine("______________________________________________________",50);
-            ford.Bewege(minuten);
-            ford.PrintStats();
+            focus.Bewege(minuten);
+            focus.PrintStats();
             TypeLine("______________________________________________________",50);
             mustang.Bewege(minuten);
             mustang.PrintStats();
             TypeLine("______________________________________________________",50);
             rkw.Bewege(minuten);
             rkw.PrintStats();
+            TypeLine("______________________________________________________", 50);
+            Console.ReadKey();
         }
 
         static void TypeLine(string line, int duration =100)

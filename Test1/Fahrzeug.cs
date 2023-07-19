@@ -30,7 +30,7 @@ namespace Test1
             if (geschwindigkeit > MaxGeschwindigkeit)
             {
                 Console.WriteLine($"{GetType().Name}: Ich soll {geschwindigkeit} km/h fahren. So schnell kann ich aber nicht fahren, " +
-                                    $"maximal sind {MaxGeschwindigkeit} km/h drin");
+                                    $"maximal sind {MaxGeschwindigkeit} km/h erlaubt");
                 geschwindigkeit = MaxGeschwindigkeit;
             }
             AktuelleGeschwindigkeit = geschwindigkeit;
@@ -50,7 +50,6 @@ namespace Test1
 
         public virtual void PrintStats(bool vorsprung)
         {
-
         }
     }
 }
